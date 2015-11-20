@@ -10,3 +10,5 @@ Run `npm install` to install dependencies.
 Run the application from Visual Studio (There is no HTTP server included).
 
 Run `npm test` to launch protractor.
+
+[![Build status](https://ci.appveyor.com/api/projects/status/fcg13r8jitps4i40/branch/master?svg=true)](https://ci.appveyor.com/project/Crevil/appveyor-protractor-test-app/branch/master)
