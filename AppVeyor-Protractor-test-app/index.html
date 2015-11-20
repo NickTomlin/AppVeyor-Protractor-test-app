@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <title>AngularJS protractor-http-mock test application</title>
+    <meta name="viewport" content="width=device-width">
+
+</head>
+    <body ng-controller="MainCtrl">
+
+        <h1>Repeat data in array</h1>
+        <p ng-repeat="d in data">{{d.item}}</p>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+        <script>
+            var app = angular.module('app', []);
+
+            app.controller('MainCtrl', function ($scope) {
+                $scope.data = [{ item: 'Item1' }, { item: 'Item2' }];
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "name": "AppVeyor-Protractor-test-app",
+  "version": "1.0.0",
+  "description": "Application running a minimal solution with a web application and protractor on selinium.",
+  "main": "index.html",
+  "scripts": {
+    "postinstall": "node_modules\\.bin\\webdriver-manager update --standalone",
+    "test": "node node_modules\\protractor\\bin\\protractor protractor.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Crevil/AppVeyor-Protractor-test-app.git"
+  },
+  "keywords": [
+    "angularjs",
+    "protractor",
+    "protractor-http-mock"
+  ],
+  "author": "Bjørn Sørensen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Crevil/AppVeyor-Protractor-test-app/issues"
+  },
+  "homepage": "https://github.com/Crevil/AppVeyor-Protractor-test-app#readme",
+  "dependencies": {
+    "jasmine-core": "^2.3.4",
+    "protractor": "^3.0.0"
+  }
+}

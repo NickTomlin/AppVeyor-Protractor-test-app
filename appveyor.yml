@@ -1,0 +1,30 @@
+version: 1.0.{build}
+environment:
+  NODEJS_VERSION: "4"
+services:
+- iis
+cache:
+  - node_modules -> package.json
+configuration:
+  - AppVeyor
+install:
+  - ps: install-Product node $env:NODEJS_VERSION
+  - npm install
+build:
+  project: AppVeyor-Protractor-test-app.sln
+  verbosity: quiet
+  publish_wap: true
+test: off
+deploy:
+- provider: Local
+  Presentation.Web.deploy_website: true
+  Presentation.Web.site_name: Test
+  Presentation.Web.hostname: localhost
+  Presentation.Web.port: 47602
+  Presentation.Web.protocol: http
+  Presentation.Web.remove_files: true
+after_deploy:
+  - node_modules\.bin\protractor protractor.conf.js
+artifacts:
+- path: npm-debug.log
+  name: npm error log
