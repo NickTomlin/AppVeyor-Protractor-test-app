@@ -18,7 +18,7 @@ test: off
 deploy:
 - provider: Local
   Presentation.Web.deploy_website: true
-  Presentation.Web.site_name: Test
+  Presentation.Web.site_name: AppVeyor-Protractor-test-app
   Presentation.Web.hostname: localhost
   Presentation.Web.port: 47602
   Presentation.Web.protocol: http
