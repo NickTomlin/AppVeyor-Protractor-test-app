@@ -17,12 +17,12 @@ build:
 test: off
 deploy:
 - provider: Local
-  Presentation.Web.deploy_website: true
-  Presentation.Web.site_name: AppVeyor-Protractor-test-app
-  Presentation.Web.hostname: localhost
-  Presentation.Web.port: 47602
-  Presentation.Web.protocol: http
-  Presentation.Web.remove_files: true
+  AppVeyor-Protractor-test-app.deploy_website: true
+  AppVeyor-Protractor-test-app.site_name: Test
+  AppVeyor-Protractor-test-app.hostname: localhost
+  AppVeyor-Protractor-test-app.port: 47602
+  AppVeyor-Protractor-test-app.protocol: http
+  AppVeyor-Protractor-test-app.remove_files: true
 after_deploy:
   - node_modules\.bin\protractor protractor.conf.js
 artifacts:
