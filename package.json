@@ -4,7 +4,6 @@
   "description": "Application running a minimal solution with a web application and protractor on selinium.",
   "main": "index.html",
   "scripts": {
-    "postinstall": "node_modules\\.bin\\webdriver-manager update --standalone",
     "test": "node node_modules\\protractor\\bin\\protractor protractor.conf.js"
   },
   "repository": {
@@ -14,7 +13,7 @@
   "keywords": [
     "angularjs",
     "protractor",
-    "protractor-http-mock"
+    "appveyor"
   ],
   "author": "Bjørn Sørensen",
   "license": "MIT",

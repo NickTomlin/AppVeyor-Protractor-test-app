@@ -2,8 +2,8 @@
     seleniumAddress: 'http://hub.browserstack.com/wd/hub',
 
     capabilities: {
-        'browserstack.user': 'bjrnsrensen1',
-        'browserstack.key': 'xtgrQB4oeCCTqGKpoUye',
+        'browserstack.user': process.BROWSERSTACK_USER,
+        'browserstack.key': process.BROWSERSTACK_KEY,
 
         // Needed for testing localhost
         'browserstack.local': 'true',
