@@ -1,7 +1,6 @@
-﻿var browserStackUser = process.BROWSERSTACK_USER;
-var browserStackKey = process.BROWSERSTACK_KEY;
-var appv = process.APPVEYOR;
-console.log(browserStackUser + ' ' + browserStackKey + ' ' + appv);
+﻿var browserStackUser = process.env.BROWSERSTACK_USER;
+var browserStackKey = process.env.BROWSERSTACK_KEY;
+console.log(browserStackUser + ' ' + browserStackKey);
 
 exports.config = {
     seleniumAddress: 'http://hub.browserstack.com/wd/hub',
