@@ -4,7 +4,7 @@
   "description": "Application running a minimal solution with a web application and protractor on selinium.",
   "main": "index.html",
   "scripts": {
-    "pretest": "start BrowserStackLocal xtgrQB4oeCCTqGKpoUye localhost,47602,0 & timeout 5",
+    "pretest": "start BrowserStackLocal xtgrQB4oeCCTqGKpoUye localhost,47602,0 && timeout 5",
     "test": "node_modules\\.bin\\protractor protractor.conf.js --troubleshoot",
     "posttest": "taskkill /T /F /IM BrowserStackLocal.exe"
   },
