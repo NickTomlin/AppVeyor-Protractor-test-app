@@ -99,6 +99,9 @@ _TeamCity*
 # DotCover is a Code Coverage Tool
 *.dotCover
 
+# BrowserStack tunnel
+!BrowserStackLocal.exe
+
 # NCrunch
 _NCrunch_*
 .*crunch*.local.xml
