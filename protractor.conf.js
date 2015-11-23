@@ -1,9 +1,14 @@
-﻿exports.config = {
+﻿var browserStackUser = process.BROWSERSTACK_USER;
+var browserStackKey = process.BROWSERSTACK_KEY;
+var appv = process.APPVEYOR;
+console.log(browserStackUser + ' ' + browserStackKey + ' ' + appv);
+
+exports.config = {
     seleniumAddress: 'http://hub.browserstack.com/wd/hub',
 
     capabilities: {
-        'browserstack.user': process.BROWSERSTACK_USER,
-        'browserstack.key': process.BROWSERSTACK_KEY,
+        'browserstack.user': browserStackUser,
+        'browserstack.key': browserStackKey,
 
         // Needed for testing localhost
         'browserstack.local': 'true',
