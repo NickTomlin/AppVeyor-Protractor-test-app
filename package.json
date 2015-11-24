@@ -4,9 +4,8 @@
   "description": "Application running a minimal solution with a web application and protractor on selinium.",
   "main": "index.html",
   "scripts": {
-    "pretest": "start BrowserStackLocal %BROWSERSTACK_KEY% localhost,47602,0 && timeout 5",
-    "test": "node_modules\\.bin\\protractor protractor.conf.js --troubleshoot",
-    "posttest": "taskkill /T /F /IM BrowserStackLocal.exe"
+    "pretest": "webdriver-manager update",
+    "test": "node_modules\\.bin\\protractor protractor.conf.js --troubleshoot"
   },
   "repository": {
     "type": "git",
@@ -24,7 +23,6 @@
   },
   "homepage": "https://github.com/Crevil/AppVeyor-Protractor-test-app#readme",
   "dependencies": {
-    "jasmine-core": "^2.3.4",
     "protractor": "^3.0.0"
   }
 }
